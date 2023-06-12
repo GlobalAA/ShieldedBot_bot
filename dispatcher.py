@@ -4,6 +4,7 @@ import os
 import dotenv
 from aiogram import Bot, Dispatcher
 
+from filters.chat_type import ChatTypeFilter
 from filters.is_admin import IsAdminFilter
 from filters.is_mention import IsMentionFilter
 
@@ -16,3 +17,4 @@ dp = Dispatcher(bot)
 
 dp.filters_factory.bind(IsAdminFilter)
 dp.filters_factory.bind(IsMentionFilter)
+dp.filters_factory.bind(ChatTypeFilter)
